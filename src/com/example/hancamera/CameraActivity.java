@@ -78,6 +78,7 @@ public class CameraActivity extends Activity {
 				fos.write(data);
 				fos.close();
 				Log.e("onPictureTaken", "save success, path: " + pictureFile.getPath());
+				mCamera.startPreview();
 			} catch (FileNotFoundException e) {
 				Log.e(TAG, "File not found: " + e.getMessage());
 			} catch (IOException e) {
